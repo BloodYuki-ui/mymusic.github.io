@@ -18,3 +18,13 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Находим все элементы <audio> на странице
+    const audioElements = document.querySelectorAll("audio");
+
+    // Устанавливаем громкость на 50% для каждого аудио
+    audioElements.forEach(audio => {
+        audio.volume = 0.5; // 0.5 соответствует 50% громкости
+    });
+});
