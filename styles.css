@@ -1,0 +1,238 @@
+.about-me {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.about-me p {
+    margin: 0;
+}
+
+.highlight {
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.highlight:hover {
+    transform: translateY(-3px);
+    color: #000;
+}
+
+.about-me a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.about-me a:hover {
+    color: #000;
+    transform: translateY(-3px);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #333, #000);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    margin-top: 20px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.portfolio-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.portfolio-section1 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.portfolio-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.portfolio-section1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.portfolio-section h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.portfolio-section1 h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.portfolio-section h2::before {
+    content: '▶';
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+.portfolio-section1 h2::before {
+    content: '▶';
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+.portfolio-section.active h2::before {
+    transform: rotate(90deg);
+}
+.portfolio-section1.active h2::before {
+    transform: rotate(90deg);
+}
+
+.portfolio-content {
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-section.active .portfolio-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.portfolio-section1.active .portfolio-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.subgroup {
+    margin-top: 15px;
+}
+
+.subgroup h3 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+.subgroup h3::before {
+    content: '▶';
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.subgroup.active h3::before {
+    transform: rotate(90deg);
+}
+
+.subgroup-content {
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.subgroup.active .subgroup-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    border-radius: 50%;
+}
+
+.feedback {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.feedback-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feedback-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: opacity 0.3s;
+}
+
+.feedback-icons a:hover {
+    opacity: 0.7;
+}
+
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+#scroll-to-top:hover {
+    background-color: #555;
+}
